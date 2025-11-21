@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Shoes - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JD Shoes</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="openCart()">🛒 <span id="cart-count">0</span></div>
+        </nav>
+    </header>
+
+    <section class="products-page">
+        <h1>Our Shoes Collection</h1>
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search shoes...">
+            <select id="category">
+                <option value="all">All Categories</option>
+                <option value="running">Running</option>
+                <option value="casual">Casual</option>
+                <option value="formal">Formal</option>
+                <option value="sports">Sports</option>
+            </select>
+        </div>
+        <div class="product-grid" id="product-list">
+            <div class="product" data-category="running">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop" alt="Air Max Runner">
+                <h3>Air Max Runner</h3>
+                <p>Lightweight running shoes for ultimate comfort. ⭐⭐⭐⭐⭐ (4.8/5)</p>
+                <p>₹8,500</p>
+                <button onclick="addToCart('Air Max Runner', 8500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="casual">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=200&fit=crop" alt="Urban Sneak">
+                <h3>Urban Sneak</h3>
+                <p>Stylish casual sneakers for everyday wear. ⭐⭐⭐⭐ (4.5/5)</p>
+                <p>₹6,200</p>
+                <button onclick="addToCart('Urban Sneak', 6200)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="formal">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Classic Loafer">
+                <h3>Classic Loafer</h3>
+                <p>Elegant formal loafers for office or events. ⭐⭐⭐⭐⭐ (4.9/5)</p>
+                <p>₹10,500</p>
+                <button onclick="addToCart('Classic Loafer', 10500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="sports">
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=200&fit=crop" alt="Basketball High">
+                <h3>Basketball High</h3>
+                <p>High-top basketball shoes with ankle support. ⭐⭐⭐⭐ (4.6/5)</p>
+                <p>₹9,200</p>
+                <button onclick="addToCart('Basketball High', 9200)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="running">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=200&fit=crop" alt="Trail Runner">
+                <h3>Trail Runner</h3>
+                <p>Rugged trail running shoes for outdoor adventures. ⭐⭐⭐⭐⭐ (4.7/5)</p>
+                <p>₹7,800</p>
+                <button onclick="addToCart('Trail Runner', 7800)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="casual">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Canvas Sneak">
+                <h3>Canvas Sneak</h3>
+                <p>Classic canvas sneakers in multiple colors. ⭐⭐⭐⭐ (4.4/5)</p>
+                <p>₹5,500</p>
+                <button onclick="addToCart('Canvas Sneak', 5500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="sports">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&h=200&fit=crop" alt="Hiking Boot">
+                <h3>Hiking Boot</h3>
+                <p>Durable hiking boots for rough terrains. ⭐⭐⭐⭐⭐ (4.8/5)</p>
+                <p>₹11,000</p>
+                <button onclick="addToCart('Hiking Boot', 11000)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="sports">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" alt="Soccer Cleat">
+                <h3>Soccer Cleat</h3>
+                <p>Agile soccer cleats for professional play. ⭐⭐⭐⭐ (4.5/5)</p>
+                <p>₹8,900</p>
+                <button onclick="addToCart('Soccer Cleat', 8900)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="formal">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Formal Oxford">
+                <h3>Formal Oxford</h3>
+                <p>Polished oxford shoes for business attire. ⭐⭐⭐⭐⭐ (4.9/5)</p>
+                <p>₹12,000</p>
+                <button onclick="addToCart('Formal Oxford', 12000)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="running">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop" alt="Jogger Lite">
+                <h3>Jogger Lite</h3>
+                <p>Light joggers for daily runs. ⭐⭐⭐⭐ (4.6/5)</p>
+                <p>₹6,500</p>
+                <button onclick="addToCart('Jogger Lite', 6500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="casual">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=200&fit=crop" alt="Slip-On Casual">
+                <h3>Slip-On Casual</h3>
+                <p>Easy slip-on sneakers for comfort. ⭐⭐⭐⭐ (4.4/5)</p>
+                <p>₹4,800</p>
+                <button onclick="addToCart('Slip-On Casual', 4800)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="formal">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Derby Shoe">
+                <h3>Derby Shoe</h3>
+                <p>Versatile derby shoes for formal occasions. ⭐⭐⭐⭐⭐ (4.7/5)</p>
+                <p>₹11,500</p>
+                <button onclick="addToCart('Derby Shoe', 11500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="sports">
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=200&fit=crop" alt="Tennis Shoe">
+                <h3>Tennis Shoe</h3>
+                <p>Non-slip tennis shoes for court play. ⭐⭐⭐⭐ (4.5/5)</p>
+                <p>₹7,500</p>
+                <button onclick="addToCart('Tennis Shoe', 7500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="running">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=200&fit=crop" alt="Marathon Runner">
+                <h3>Marathon Runner</h3>
+                <p>Endurance shoes for long-distance running. ⭐⭐⭐⭐⭐ (4.8/5)</p>
+                <p>₹9,500</p>
+                <button onclick="addToCart('Marathon Runner', 9500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="casual">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="High-Top Sneak">
+                <h3>High-Top Sneak</h3>
+                <p>Retro high-top sneakers for style. ⭐⭐⭐⭐ (4.6/5)</p>
+                <p>₹7,200</p>
+                <button onclick="addToCart('High-Top Sneak', 7200)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="formal">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Loafer Luxe">
+                <h3>Loafer Luxe</h3>
+                <p>Luxury loafers with premium leather. ⭐⭐⭐⭐⭐ (4.9/5)</p>
+                <p>₹13,500</p>
+                <button onclick="addToCart('Loafer Luxe', 13500)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="sports">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&h=200&fit=crop" alt="Golf Shoe">
+                <h3>Golf Shoe</h3>
+                <p>Spiked golf shoes for better grip. ⭐⭐⭐⭐ (4.7/5)</p>
+                <p>₹10,200</p>
+                <button onclick="addToCart('Golf Shoe', 10200)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="casual">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=200&fit=crop" alt="Daily Walk">
+                <h3>Daily Walk</h3>
+                <p>Comfortable walkers for everyday use. ⭐⭐⭐⭐ (4.3/5)</p>
+                <p>₹5,200</p>
+                <button onclick="addToCart('Daily Walk', 5200)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="formal">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Executive Loafer">
+                <h3>Executive Loafer</h3>
+                <p>Executive-style loafers for professionals. ⭐⭐⭐⭐⭐ (4.8/5)</p>
+                <p>₹12,800</p>
+                <button onclick="addToCart('Executive Loafer', 12800)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="running">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop" alt="Speed Runner">
+                <h3>Speed Runner</h3>
+                <p>Speed-focused running shoes. ⭐⭐⭐⭐ (4.6/5)</p>
+                <p>₹8,800</p>
+                <button onclick="addToCart('Speed Runner', 8800)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="casual">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Retro Sneak">
+                <h3>Retro Sneak</h3>
+                <p>Vintage-inspired retro sneakers. ⭐⭐⭐⭐ (4.5/5)</p>
+                <p>₹6,100</p>
+                <button onclick="addToCart('Retro Sneak', 6100)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="formal">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Wedding Formal">
+                <h3>Wedding Formal</h3>
+                <p>Elegant shoes for weddings and events. ⭐⭐⭐⭐⭐ (4.9/5)</p>
+                <p>₹15,000</p>
+                <button onclick="addToCart('Wedding Formal', 15000)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="sports">
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=200&fit=crop" alt="Volleyball Spike">
+                <h3>Volleyball Spike</h3>
+                <p>Specialized volleyball shoes with cushioning. ⭐⭐⭐⭐ (4.7/5)</p>
+                <p>₹9,600</p>
+                <button onclick="addToCart('Volleyball Spike', 9600)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="sports">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&h=200&fit=crop" alt="All-Terrain Boot">
+                <h3>All-Terrain Boot</h3>
+                <p>Rugged boots for all terrains. ⭐⭐⭐⭐⭐ (4.8/5)</p>
+                <p>₹11,800</p>
+                <button onclick="addToCart('All-Terrain Boot', 11800)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <p>&copy; 2023 JD Shoes. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/jdshoes" target="_blank">Facebook</a> | 
+        <a href="https://www.instagram.com/jaydeep_dhandhresha88?igsh=djfma3U0aHRoN2Zx" target="_blank">Instagram</a> | 
+        <a href="https://www.twitter.com/jdshoes" target="_blank">Twitter</a>
+    </div>
+</footer>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

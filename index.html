@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Shoes - Premium Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JD Shoes</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="openCart()">🛒 <span id="cart-count">0</span></div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to JD Shoes</h1>
+        <p>Step into style with our premium collection. Discover comfort and fashion.</p>
+        <button onclick="window.location.href='products.html'">Shop Now</button>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Shoes</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop" alt="Running Shoes">
+                <h3>Air Max Runner</h3>
+                <p>₹8,500</p>
+                <button onclick="addToCart('Air Max Runner', 8500)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=200&fit=crop" alt="Casual Sneakers">
+                <h3>Urban Sneak</h3>
+                <p>₹6,200</p>
+                <button onclick="addToCart('Urban Sneak', 6200)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Formal Loafers">
+                <h3>Classic Loafer</h3>
+                <p>₹10,500</p>
+                <button onclick="addToCart('Classic Loafer', 10500)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <p>&copy; 2023 JD Shoes. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/jdshoes" target="_blank">Facebook</a> | 
+        <a href="https://www.instagram.com/jaydeep_dhandhresha88?igsh=djfma3U0aHRoN2Zx" target="_blank">Instagram</a> | 
+        <a href="https://www.twitter.com/jdshoes" target="_blank">Twitter</a>
+    </div>
+</footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

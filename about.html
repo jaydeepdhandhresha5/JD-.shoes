@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Shoes - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JD Shoes</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="openCart()">🛒 <span id="cart-count">0</span></div>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>About JD Shoes</h1>
+        <p>Founded in 2020, JD Shoes is dedicated to crafting high-quality footwear for every occasion. We prioritize comfort, durability, and style, sourcing materials from sustainable suppliers.</p>
+        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=300&fit=crop" alt="JD Shoes Team">
+    </section>
+
+    <footer>
+    <p>&copy; 2023 JD Shoes. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/jdshoes" target="_blank">Facebook</a> | 
+        <a href="https://www.instagram.com/jaydeep_dhandhresha88?igsh=djfma3U0aHRoN2Zx" target="_blank">Instagram</a> | 
+        <a href="https://www.twitter.com/jdshoes" target="_blank">Twitter</a>
+    </div>
+</footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
